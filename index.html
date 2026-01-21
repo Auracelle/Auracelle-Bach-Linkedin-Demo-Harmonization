@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auracelle Bach - Harmonizing Global Governance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #1a472a;
+            --secondary: #2d5f3f;
+            --accent: #8fbc8f;
+            --gold: #d4af37;
+            --cream: #f5f5dc;
+            --dark: #0a1612;
+            --text-light: #e8f4e8;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(143, 188, 143, 0.03) 2px,
+                    rgba(143, 188, 143, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 30px;
+            background: rgba(26, 71, 42, 0.4);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(143, 188, 143, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '♪';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: -40px;
+            right: 50px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: var(--gold);
+            text-shadow: 0 2px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .bach-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1em;
+            color: var(--accent);
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .tagline {
+            font-size: 1.4em;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        .subtitle {
+            font-size: 1.05em;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        .amodei-quote {
+            margin-top: 30px;
+            padding: 25px 35px;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 12px 12px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .amodei-quote p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-style: italic;
+            color: var(--gold);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .amodei-quote .attribution {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9em;
+            font-style: normal;
+            color: var(--accent);
+            text-align: right;
+        }
+        
+        .credentials {
+            font-size: 0.95em;
+            color: rgba(232, 244, 232, 0.7);
+            margin-top: 25px;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .demo-controls {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            border: 1px solid rgba(143, 188, 143, 0.3);
+            color: var(--text-light);
+            padding: 16px 35px;
+            font-size: 1.05em;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+            transition: all 0.4s ease;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(143, 188, 143, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(143, 188, 143, 0.3);
+            border-color: var(--accent);
+        }
+        
+        .harmonization-intro {
+            background: rgba(26, 71, 42, 0.3);
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(143, 188, 143, 0.2);
+            text-align: center;
+        }
+        
+        .harmonization-intro h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            color: var(--gold);
+            font-weight: 400;
+        }
+        
+        .harmonization-intro p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: var(--text-light);
+            max-width: 900px;
+            margin: 0 auto 25px;
+            font-weight: 300;
+        }
+        
+        .harmonization-intro .emphasis {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5em;
+            color: var(--accent);
+            font-style: italic;
+            margin: 30px 0;
+            display: block;
+        }
+        
+        .musical-staff {
+            margin: 40px auto;
+            max-width: 700px;
+            padding: 30px;
+            background: rgba(10, 22, 18, 0.4);
+            border-radius: 12px;
+            border: 1px solid rgba(143, 188, 143, 0.15);
+        }
+        
+        .staff-line {
+            display: flex;
+            align-items: center;
+            margin: 18px 0;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 0.9em;
+        }
+        
+        .staff-label {
+            width: 140px;
+            color: var(--accent);
+            font-weight: 500;
+            text-align: right;
+            margin-right: 20px;
+        }
+        
+        .staff-notation {
+            flex: 1;
+            height: 2px;
+            background: rgba(143, 188, 143, 0.2);
+            position: relative;
+        }
+        
+        .note {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background: var(--gold);
+            border-radius: 50%;
+            top: -6px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        .note:nth-child(1) { left: 15%; animation-delay: 0s; }
+        .note:nth-child(2) { left: 40%; animation-delay: 0.3s; }
+        .note:nth-child(3) { left: 65%; animation-delay: 0.6s; }
+        .note:nth-child(4) { left: 85%; animation-delay: 0.9s; }
+        
+        .voice-description {
+            font-size: 0.75em;
+            color: rgba(232, 244, 232, 0.6);
+            margin-left: 160px;
+            font-style: italic;
+        }
+        
+        .research-workflows {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+        
+        .workflow-card {
+            background: rgba(26, 71, 42, 0.3);
+            border-radius: 16px;
+            padding: 35px;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(143, 188, 143, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .workflow-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .workflow-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .workflow-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 35px rgba(143, 188, 143, 0.25);
+            background: rgba(26, 71, 42, 0.5);
+        }
+        
+        .workflow-card.active {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
+        }
+        
+        .workflow-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .workflow-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(143, 188, 143, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--accent);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1em;
+        }
+        
+        .workflow-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        
+        .workflow-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-weight: 300;
+            font-size: 0.98em;
+        }
+        
+        .workflow-cta {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            margin-top: 18px;
+        }
+        
+        .workflow-cta::after {
+            content: '→';
+            margin-left: 8px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .workflow-card:hover .workflow-cta::after {
+            margin-left: 14px;
+        }
+        
+        .demo-panel {
+            background: rgba(26, 71, 42, 0.3);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(143, 188, 143, 0.2);
+            display: none;
+            animation: slideIn 0.6s ease;
+        }
+        
+        .demo-panel.show {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .demo-header {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.3em;
+            margin-bottom: 30px;
+            color: var(--gold);
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .comparison-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            margin: 35px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .comparison-side {
+            background: rgba(10, 22, 18, 0.3);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid;
+        }
+        
+        .traditional {
+            border-left-color: #8b4513;
+        }
+        
+        .bach {
+            border-left-color: var(--gold);
+        }
+        
+        .comparison-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+        
+        .traditional .comparison-label {
+            color: #cd853f;
+        }
+        
+        .bach .comparison-label {
+            color: var(--gold);
+        }
+        
+        .comparison-content {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .time-badge {
+            display: inline-block;
+            background: rgba(139, 69, 19, 0.2);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-weight: 500;
+            color: #cd853f;
+        }
+        
+        .bach .time-badge {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold);
+        }
+        
+        .interactive-demo {
+            background: rgba(143, 188, 143, 0.08);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid rgba(143, 188, 143, 0.2);
+            margin: 30px 0;
+        }
+        
+        .demo-input-group {
+            margin-bottom: 22px;
+        }
+        
+        .demo-label {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+        
+        .demo-input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(10, 22, 18, 0.4);
+            border: 1px solid rgba(143, 188, 143, 0.25);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-size: 1em;
+            font-family: 'Work Sans', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(10, 22, 18, 0.6);
+        }
+        
+        .demo-output {
+            background: rgba(10, 22, 18, 0.5);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--gold);
+            margin-top: 25px;
+            display: none;
+        }
+        
+        .demo-output.show {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .output-title {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 18px;
+            font-size: 1.15em;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .output-content {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+        
+        .framework-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .framework-item {
+            background: rgba(143, 188, 143, 0.08);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            border-left: 3px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .framework-item:hover {
+            background: rgba(143, 188, 143, 0.15);
+            transform: translateX(5px);
+        }
+        
+        .framework-item.dissonance {
+            border-left-color: #cd853f;
+            background: rgba(205, 133, 63, 0.08);
+        }
+        
+        .framework-item.harmony {
+            border-left-color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+        
+        .framework-item.silent {
+            border-left-color: #8b8b8b;
+            background: rgba(139, 139, 139, 0.08);
+        }
+        
+        .insight-box {
+            background: rgba(212, 175, 55, 0.12);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: 25px;
+        }
+        
+        .insight-icon {
+            font-size: 1.5em;
+            margin-right: 12px;
+        }
+        
+        .insight-text {
+            color: var(--gold);
+            font-weight: 500;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        
+        .harmonization-bar {
+            width: 100%;
+            height: 35px;
+            background: rgba(10, 22, 18, 0.4);
+            border-radius: 18px;
+            overflow: hidden;
+            margin: 12px 0;
+            position: relative;
+            border: 1px solid rgba(143, 188, 143, 0.2);
+        }
+        
+        .harmonization-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--gold));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05em;
+        }
+        
+        .scenario-branches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .scenario-branch {
+            background: rgba(10, 22, 18, 0.3);
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 3px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .scenario-branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(143, 188, 143, 0.15);
+        }
+        
+        .scenario-branch.convergence {
+            border-top-color: var(--gold);
+        }
+        
+        .scenario-branch.polyphonic {
+            border-top-color: var(--accent);
+        }
+        
+        .scenario-branch.dissonance {
+            border-top-color: #cd853f;
+        }
+        
+        .impact-metrics {
+            background: rgba(26, 71, 42, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(143, 188, 143, 0.2);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .metric-item {
+            text-align: center;
+            padding: 25px;
+            background: rgba(10, 22, 18, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(143, 188, 143, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .metric-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8em;
+            font-weight: 600;
+            color: var(--gold);
+        }
+        
+        .metric-label {
+            color: var(--accent);
+            margin-top: 12px;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+        
+        .auto-play-indicator {
+            position: fixed;
+            top: 25px;
+            right: 25px;
+            background: rgba(212, 175, 55, 0.2);
+            padding: 12px 24px;
+            border-radius: 30px;
+            border: 2px solid var(--gold);
+            display: none;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        
+        .auto-play-indicator.active {
+            display: block;
+            animation: pulse-indicator 2s infinite;
+        }
+        
+        @keyframes pulse-indicator {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: rgba(139, 69, 19, 0.3);
+            border: 1px solid rgba(205, 133, 63, 0.3);
+            color: #cd853f;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.3em;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .close-btn:hover {
+            background: rgba(139, 69, 19, 0.5);
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Auracelle Bach</h1>
+            <div class="bach-subtitle">"Composing Coherence from Complexity"</div>
+            <div class="tagline">Harmonizing Global Governance Through Cognitive Amplification</div>
+            <div class="subtitle">
+                Bach harmonizes policy cycles from 10-15 years to 18-24 months AND<br>
+                research workflows from months to weeks, revealing coherent patterns across seemingly conflicting frameworks
+            </div>
+            
+            <div class="amodei-quote">
+                <p>"Getting through technical adolescence without destroying ourselves."</p>
+                <div class="attribution">— Dario Amodei, CEO, Anthropic</div>
+            </div>
+            
+            <div class="credentials">
+                <strong>Grace-Alice Evans</strong> | Director & PI, Auracelle AI Governance Labs<br>
+                PhD Candidate, AI Governance Policy Optimization, Bath Spa University<br>
+                Non-Resident Senior Fellow, UC Berkeley Center for Long-Term Cybersecurity
+            </div>
+        </header>
+        
+        <div class="demo-controls">
+            <button class="btn" onclick="startAutoDemo()">▶ Start Harmonization Tour</button>
+            <button class="btn" onclick="resetDemo()">↺ Reset</button>
+        </div>
+        
+        <div class="auto-play-indicator" id="autoPlayIndicator">
+            🎵 Orchestrating research workflows...
+        </div>
+        
+        <div class="harmonization-intro">
+            <h2>🎵 Why Harmonization?</h2>
+            <p>
+                12+ international frameworks. Different values. Competing priorities. Apparent contradictions.
+            </p>
+            <p>
+                Traditional research asks: <em>"Which framework is right?"</em>
+            </p>
+            <span class="emphasis">Bach asks: "How do they harmonize?"</span>
+            <p>
+                Just as Bach's fugues weave independent voices into unified compositions, Auracelle Bach reveals how seemingly conflicting governance frameworks create coherent patterns when properly orchestrated.
+            </p>
+            <p style="margin-top: 25px; color: var(--gold); font-weight: 400;">
+                This is harmonization: not eliminating differences, but revealing the deeper structure that makes cooperation possible.
+            </p>
+            
+            <div class="musical-staff">
+                <div style="text-align: center; margin-bottom: 25px; color: var(--accent); font-size: 0.95em;">
+                    Different voices, coherent composition
+                </div>
+                <div class="staff-line">
+                    <div class="staff-label">EU AI Act</div>
+                    <div class="staff-notation">
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                    </div>
+                </div>
+                <div class="voice-description">soprano — highest regulatory stringency</div>
+                
+                <div class="staff-line">
+                    <div class="staff-label">GDPR</div>
+                    <div class="staff-notation">
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                    </div>
+                </div>
+                <div class="voice-description">alto — data protection harmony</div>
+                
+                <div class="staff-line">
+                    <div class="staff-label">OECD Principles</div>
+                    <div class="staff-notation">
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                    </div>
+                </div>
+                <div class="voice-description">tenor — international cooperation</div>
+                
+                <div class="staff-line">
+                    <div class="staff-label">China AI Plan</div>
+                    <div class="staff-notation">
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                        <div class="note"></div>
+                    </div>
+                </div>
+                <div class="voice-description">bass — security foundation</div>
+            </div>
+        </div>
+        
+        <div class="impact-metrics">
+            <h2 style="text-align: center; color: var(--gold); margin-bottom: 12px; font-family: 'Cormorant Garamond', serif; font-size: 2em; font-weight: 400;">Harmonization Metrics</h2>
+            <p style="text-align: center; color: var(--accent); margin-bottom: 25px; font-weight: 300;">How Bach orchestrates governance research capabilities</p>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-value">85%</div>
+                    <div class="metric-label">Dissonance Resolution</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">12</div>
+                    <div class="metric-label">Frameworks Harmonized</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">40+</div>
+                    <div class="metric-label">Voices Orchestrated</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">18-24mo</div>
+                    <div class="metric-label">Time to Policy Harmony</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; color: var(--gold); margin-bottom: 35px; font-size: 2em; font-family: 'Cormorant Garamond', serif; font-weight: 400;">
+            Five Research Workflows Bach Harmonizes
+        </h2>
+        
+        <div class="research-workflows">
+            <div class="workflow-card" onclick="showWorkflow(1)">
+                <div class="workflow-number">1</div>
+                <span class="workflow-icon">📚</span>
+                <div class="workflow-title">Polyphonic Literature Synthesis</div>
+                <div class="workflow-description">
+                    Harmonize 12 competing frameworks into coherent synthesis—find the melody within the noise. Reveal underlying harmonic structures that connect transparency-first and security-first approaches.
+                </div>
+                <div class="workflow-cta">Explore Harmonization</div>
+            </div>
+            
+            <div class="workflow-card" onclick="showWorkflow(2)">
+                <div class="workflow-number">2</div>
+                <span class="workflow-icon">💡</span>
+                <div class="workflow-title">Hypothesis Resonance Testing</div>
+                <div class="workflow-description">
+                    Harmonize intuition with evidence—test whether your hypothesis resonates across frameworks or creates productive dissonance that strengthens understanding.
+                </div>
+                <div class="workflow-cta">Explore Harmonization</div>
+            </div>
+            
+            <div class="workflow-card" onclick="showWorkflow(3)">
+                <div class="workflow-number">3</div>
+                <span class="workflow-icon">🔄</span>
+                <div class="workflow-title">Counterfactual Recomposition</div>
+                <div class="workflow-description">
+                    Replay history in a different key—harmonize past events with modern frameworks to reveal pathways to faster resolution and coherent governance emergence.
+                </div>
+                <div class="workflow-cta">Explore Harmonization</div>
+            </div>
+            
+            <div class="workflow-card" onclick="showWorkflow(4)">
+                <div class="workflow-number">4</div>
+                <span class="workflow-icon">🔍</span>
+                <div class="workflow-title">Universal Theme Recognition</div>
+                <div class="workflow-description">
+                    Hear the universal themes—find harmonic patterns that resonate across cultures. Understand which governance melodies transcend context vs. require local orchestration.
+                </div>
+                <div class="workflow-cta">Explore Harmonization</div>
+            </div>
+            
+            <div class="workflow-card" onclick="showWorkflow(5)">
+                <div class="workflow-number">5</div>
+                <span class="workflow-icon">🔮</span>
+                <div class="workflow-title">Future Harmony Composition</div>
+                <div class="workflow-description">
+                    Compose future harmonies—orchestrate how stakeholders' competing interests can resolve into coherent governance that helps humanity navigate technical adolescence.
+                </div>
+                <div class="workflow-cta">Explore Harmonization</div>
+            </div>
+        </div>
+        
+        <!-- Demo Panel 1: Polyphonic Literature Synthesis -->
+        <div class="demo-panel" id="demo1">
+            <button class="close-btn" onclick="closeDemo()">×</button>
+            <h2 class="demo-header">📚 Polyphonic Literature Synthesis</h2>
+            
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-label">Traditional Approach</div>
+                    <div class="comparison-content">
+                        PhD student manually reads through documentation for EU AI Act, GDPR, UNESCO AI Ethics, OECD Principles, and 8 other frameworks to understand how each addresses AI transparency.
+                        <br><br>
+                        Must create manual comparison matrices, track contradictions in spreadsheets, and hope nothing was missed. Each framework analyzed in isolation.
+                    </div>
+                    <span class="time-badge">⏱️ 6 months</span>
+                </div>
+                
+                <div class="comparison-side bach">
+                    <div class="comparison-label">Bach Harmonization</div>
+                    <div class="comparison-content">
+                        Input your research question. Bach automatically harmonizes all 12 frameworks, revealing underlying harmonic structures, identifying productive dissonance pathways, and showing how different governance voices complement each other.
+                        <br><br>
+                        Generates synthesis that preserves each framework's integrity while revealing coherent patterns.
+                    </div>
+                    <span class="time-badge">⚡ 2-3 weeks</span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <div class="demo-input-group">
+                    <label class="demo-label">Enter Your Research Question:</label>
+                    <input type="text" class="demo-input" id="research-query" 
+                           placeholder="e.g., 'AI transparency requirements across frameworks'">
+                </div>
+                <button class="btn" onclick="runLiteratureDemo()">🎵 Harmonize Frameworks</button>
+                
+                <div class="demo-output" id="literature-output">
+                    <div class="output-title">🎼 Framework Harmonization Analysis</div>
+                    <div class="output-content">
+                        <p style="margin-bottom: 15px;"><strong>Harmonized 12 International Frameworks in 2.3 seconds</strong></p>
+                        
+                        <div class="framework-matrix">
+                            <div class="framework-item harmony">
+                                <strong>EU AI Act</strong><br>
+                                <small>High transparency - soprano voice (stringency)</small>
+                            </div>
+                            <div class="framework-item harmony">
+                                <strong>GDPR</strong><br>
+                                <small>Right to explanation - alto voice (protection)</small>
+                            </div>
+                            <div class="framework-item dissonance">
+                                <strong>China AI Plan</strong><br>
+                                <small>Security priority - bass voice (foundation)</small>
+                            </div>
+                            <div class="framework-item harmony">
+                                <strong>OECD Principles</strong><br>
+                                <small>International cooperation - tenor voice</small>
+                            </div>
+                            <div class="framework-item harmony">
+                                <strong>UNESCO Ethics</strong><br>
+                                <small>Transparency as ethics - harmonic support</small>
+                            </div>
+                            <div class="framework-item silent">
+                                <strong>UNIDIR Space</strong><br>
+                                <small>Rest in the composition - military AI gap</small>
+                            </div>
+                        </div>
+                        
+                        <div class="insight-box">
+                            <span class="insight-icon">♪</span>
+                            <span class="insight-text">Harmonic Insight: EU AI Act, GDPR, and OECD share a common key signature (transparency-first approach), while China's framework operates in a different mode (security-first). The dissonance isn't contradiction—it's counterpoint that creates richer understanding when orchestrated together.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Demo Panel 2: Hypothesis Resonance Testing -->
+        <div class="demo-panel" id="demo2">
+            <button class="close-btn" onclick="closeDemo()">×</button>
+            <h2 class="demo-header">💡 Hypothesis Resonance Testing</h2>
+            
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-label">Traditional Approach</div>
+                    <div class="comparison-content">
+                        Researcher has intuition that democratic institutions produce stricter data protection policies. Must spend months gathering data, coding institutional variables, running statistical tests, controlling for confounds.
+                        <br><br>
+                        High risk that 18 months of work yields null results or misses nuanced patterns.
+                    </div>
+                    <span class="time-badge">⏱️ 12-18 months</span>
+                </div>
+                
+                <div class="comparison-side bach">
+                    <div class="comparison-label">Bach Harmonization</div>
+                    <div class="comparison-content">
+                        Input hypothesis. Bach tests whether it resonates harmonically across 40+ case studies, integrating World Bank governance indicators, OECD data, and Privacy International metrics.
+                        <br><br>
+                        Returns harmonic resonance scores, identifies which institutional voices strengthen vs. create productive dissonance with your hypothesis.
+                    </div>
+                    <span class="time-badge">⚡ 3-4 hours</span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <div class="demo-input-group">
+                    <label class="demo-label">Enter Your Hypothesis:</label>
+                    <input type="text" class="demo-input" id="hypothesis-input" 
+                           placeholder="e.g., 'Democratic governance structures lead to more restrictive AI policies'">
+                </div>
+                <button class="btn" onclick="runHypothesisDemo()">🎵 Test Harmonic Resonance</button>
+                
+                <div class="demo-output" id="hypothesis-output">
+                    <div class="output-title">🎯 Hypothesis Resonance Analysis</div>
+                    <div class="output-content">
+                        <p><strong>Hypothesis:</strong> Democratic governance structures lead to more restrictive AI policies</p>
+                        
+                        <p style="margin: 15px 0;"><strong>Harmonic Resonance Level:</strong></p>
+                        <div class="harmonization-bar">
+                            <div class="harmonization-fill" style="width: 68%;">68% Resonance</div>
+                        </div>
+                        
+                        <p style="margin-top: 20px;"><strong>Harmonizing Voices Identified:</strong></p>
+                        <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                            <li><strong>Electoral Competition</strong> - Strong harmonic support (r=0.72)</li>
+                            <li><strong>Civil Society Strength</strong> - Moderate resonance (r=0.58)</li>
+                            <li><strong>Regulatory Capacity</strong> - Critical mediating voice</li>
+                            <li><strong>Tech Industry Lobbying</strong> - Creates productive tension (r=-0.43)</li>
+                        </ul>
+                        
+                        <div class="insight-box">
+                            <span class="insight-icon">♫</span>
+                            <span class="insight-text">Counterpoint Cases: Singapore (authoritarian but strict) and India (democratic but permissive) aren't contradictions—they're dissonant voices that reveal hidden variables. Their tension strengthens the overall composition when understood as part of the polyphonic structure.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Demo Panel 3: Counterfactual Recomposition -->
+        <div class="demo-panel" id="demo3">
+            <button class="close-btn" onclick="closeDemo()">×</button>
+            <h2 class="demo-header">🔄 Counterfactual Recomposition</h2>
+            
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-label">Traditional Approach</div>
+                    <div class="comparison-content">
+                        "What if the EU AI Act existed during Cambridge Analytica?" becomes a speculative essay with limited empirical grounding.
+                        <br><br>
+                        Relies heavily on researcher intuition and qualitative reasoning. Hard to quantify impacts or test how governance voices would have harmonized differently.
+                    </div>
+                    <span class="time-badge">⏱️ 3-6 months</span>
+                </div>
+                
+                <div class="comparison-side bach">
+                    <div class="comparison-label">Bach Harmonization</div>
+                    <div class="comparison-content">
+                        Select policy framework and historical event. Bach replays history in a different key, showing how enforcement mechanisms would have created early harmonic convergence between regulation and industry practice.
+                        <br><br>
+                        Integrates actual data from Privacy International, World Bank, Facebook's 2018 disclosures. Reveals resolution pathways and time to harmony.
+                    </div>
+                    <span class="time-badge">⚡ 4-6 weeks</span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <div class="demo-input-group">
+                    <label class="demo-label">Select Policy Framework:</label>
+                    <select class="demo-input" id="policy-select">
+                        <option>EU AI Act (2024)</option>
+                        <option>GDPR (2018)</option>
+                        <option>China Personal Information Protection Law</option>
+                    </select>
+                </div>
+                <div class="demo-input-group">
+                    <label class="demo-label">Select Historical Event:</label>
+                    <select class="demo-input" id="event-select">
+                        <option>Cambridge Analytica Scandal (2018)</option>
+                        <option>Clearview AI Controversy (2020)</option>
+                        <option>Pegasus Spyware Revelations (2021)</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="runCounterfactualDemo()">🎵 Recompose History</button>
+                
+                <div class="demo-output" id="counterfactual-output">
+                    <div class="output-title">⏮️ Counterfactual Harmonization Results</div>
+                    <div class="output-content">
+                        <p><strong>Scenario:</strong> EU AI Act applied to Cambridge Analytica (2018)</p>
+                        
+                        <p style="margin: 15px 0;"><strong>Projected Harmonic Resolution:</strong></p>
+                        
+                        <div style="background: rgba(10,22,18,0.3); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                            <strong style="color: var(--gold);">Enforcement Harmony:</strong>
+                            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.7;">
+                                <li>EU classifies Facebook as "high-risk" AI system (profiling voice)</li>
+                                <li>Estimated fine: €2.8-4.2B (creating financial dissonance requiring resolution)</li>
+                                <li>Mandatory transparency reports within 30 days (rapid harmonization)</li>
+                                <li>Independent algorithmic audit required (external verification voice)</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: rgba(10,22,18,0.3); padding: 15px; border-radius: 8px; margin: 10px 0;">
+                            <strong style="color: var(--accent);">Behavioral Harmonization (Modeled):</strong>
+                            <ul style="margin-left: 20px; margin-top: 8px; line-height: 1.7;">
+                                <li>Facebook discontinues third-party data access 6-9 months earlier (faster resolution)</li>
+                                <li>85% probability of industry-wide harmonic convergence accelerated by 12-18 months</li>
+                                <li>Cambridge Analytica dissolves in Q2 2018 (vs Q3 actual) - dissonant voice exits composition</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="insight-box">
+                            <span class="insight-icon">🎼</span>
+                            <span class="insight-text">Critical Harmonization Point: Under EU AI Act, enforcement mechanisms create harmonic convergence 73% faster than actual GDPR timeline. The regulatory voice achieves resonance with industry practice through structural incentives rather than prolonged dissonance.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Demo Panel 4: Universal Theme Recognition -->
+        <div class="demo-panel" id="demo4">
+            <button class="close-btn" onclick="closeDemo()">×</button>
+            <h2 class="demo-header">🔍 Universal Theme Recognition</h2>
+            
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-label">Traditional Approach</div>
+                    <div class="comparison-content">
+                        Comparative case study: "Why did Singapore's AI governance model work, but similar approaches failed in Latin America?"
+                        <br><br>
+                        Requires months of qualitative interviews, document analysis, coding institutional variables manually. Risk of missing which melodic themes are universal vs. context-dependent.
+                    </div>
+                    <span class="time-badge">⏱️ 8-12 months</span>
+                </div>
+                
+                <div class="comparison-side bach">
+                    <div class="comparison-label">Bach Harmonization</div>
+                    <div class="comparison-content">
+                        Bach identifies which governance melodies transcend context vs. require local orchestration. Reveals shared harmonic principles and critical structural variations—like how a theme sounds different in different keys but remains recognizable.
+                        <br><br>
+                        Generates transferability matrix showing universal resonance patterns.
+                    </div>
+                    <span class="time-badge">⚡ 3-5 weeks</span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <div class="demo-input-group">
+                    <label class="demo-label">Compare Governance Approaches:</label>
+                    <select class="demo-input" id="context1-select">
+                        <option>Singapore Model AI Governance Framework</option>
+                        <option>EU AI Act</option>
+                        <option>UK Pro-Innovation Approach</option>
+                    </select>
+                </div>
+                <div class="demo-input-group">
+                    <label class="demo-label">Against:</label>
+                    <select class="demo-input" id="context2-select">
+                        <option>Brazil AI Strategy</option>
+                        <option>India National AI Strategy</option>
+                        <option>South Africa AI Framework</option>
+                    </select>
+                </div>
+                <button class="btn" onclick="runPatternDemo()">🎵 Identify Universal Themes</button>
+                
+                <div class="demo-output" id="pattern-output">
+                    <div class="output-title">🎶 Universal Theme Analysis</div>
+                    <div class="output-content">
+                        <p><strong>Comparing:</strong> Singapore Model vs. Brazil AI Strategy</p>
+                        
+                        <div style="margin: 20px 0;">
+                            <strong style="color: var(--gold);">♪ Shared Harmonic Themes (7 identified):</strong>
+                            <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                                <li>Risk-based regulatory melody</li>
+                                <li>Ethical AI development harmony</li>
+                                <li>Public-private partnership orchestration</li>
+                                <li>AI research infrastructure investment</li>
+                                <li>Explainability standards theme</li>
+                                <li>Data protection integration</li>
+                                <li>Sector-specific guidance variations</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="margin: 20px 0;">
+                            <strong style="color: #cd853f;">♫ Structural Variations (4 critical differences):</strong>
+                            <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                                <li><strong>Regulatory Capacity:</strong> Singapore 8.7/10 vs Brazil 4.2/10 - different orchestral capacity</li>
+                                <li><strong>Enforcement Mechanisms:</strong> Singapore centralized vs Brazil federated - different conductor models</li>
+                                <li><strong>Tech Talent Density:</strong> Singapore 4.2x higher - larger ensemble capacity</li>
+                                <li><strong>Political Stability:</strong> Singapore 9.1/10 vs Brazil 5.8/10 - tempo consistency</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: rgba(143, 188, 143, 0.08); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                            <strong style="color: var(--accent);">🎼 Harmonization Transferability:</strong>
+                            <p style="margin-top: 10px; line-height: 1.7;">
+                                <strong>Universal themes (high resonance):</strong> Ethical frameworks, sector guidance structure<br>
+                                <strong>Adaptable melodies (moderate):</strong> Public-private partnerships (requires re-orchestration)<br>
+                                <strong>Context-specific (low):</strong> Centralized enforcement, rapid iteration cycles
+                            </p>
+                        </div>
+                        
+                        <div class="insight-box">
+                            <span class="insight-icon">🎵</span>
+                            <span class="insight-text">Harmonization Recommendation: Brazil should adopt Singapore's ethical framework and sector guidance themes but compose federated enforcement suited to its polyphonic political structure. The melody transcends context; the orchestration must adapt.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Demo Panel 5: Future Harmony Composition -->
+        <div class="demo-panel" id="demo5">
+            <button class="close-btn" onclick="closeDemo()">×</button>
+            <h2 class="demo-header">🔮 Future Harmony Composition</h2>
+            
+            <div class="comparison-container">
+                <div class="comparison-side traditional">
+                    <div class="comparison-label">Traditional Approach</div>
+                    <div class="comparison-content">
+                        "How will quantum computing disrupt AI governance by 2030?" results in speculative white paper with limited empirical foundation.
+                        <br><br>
+                        Expert interviews, Delphi methods, scenario planning workshops. Results hard to quantify or understand which governance voices will harmonize vs. clash.
+                    </div>
+                    <span class="time-badge">⏱️ 6-12 months</span>
+                </div>
+                
+                <div class="comparison-side bach">
+                    <div class="comparison-label">Bach Harmonization</div>
+                    <div class="comparison-content">
+                        Multi-voice orchestration with Bayesian uncertainty quantification. Models US, EU, China stakeholders as distinct instrumental voices seeking harmonic resolution.
+                        <br><br>
+                        Projects pathways to coherent governance that helps humanity navigate technical adolescence without destroying ourselves.
+                    </div>
+                    <span class="time-badge">⚡ 6-8 weeks</span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <div class="demo-input-group">
+                    <label class="demo-label">Emerging Technology:</label>
+                    <select class="demo-input" id="tech-select">
+                        <option>Quantum Machine Learning</option>
+                        <option>Neuromorphic Computing</option>
+                        <option>Synthetic Biology AI</option>
+                    </select>
+                </div>
+                <div class="demo-input-group">
+                    <label class="demo-label">Time Horizon:</label>
+                    <select class="demo-input" id="timeframe-select">
+                        <option>2030 (5 years)</option>
+                        <option>2035 (10 years)</option>
+                        <option>2040 (15 years)</option>
+                    </select>
+                </div>
+                <div class="demo-input-group">
+                    <label class="demo-label">Key Voices:</label>
+                    <input type="text" class="demo-input" id="stakeholders-input" 
+                           value="US, EU, China, India, Private Sector" readonly>
+                </div>
+                <button class="btn" onclick="runScenarioDemo()">🎵 Compose Future Harmonies</button>
+                
+                <div class="demo-output" id="scenario-output">
+                    <div class="output-title">🌐 Future Harmony Projections (2030)</div>
+                    <div class="output-content">
+                        <p><strong>Technology:</strong> Quantum Machine Learning Impact on AI Governance</p>
+                        <p style="margin-bottom: 20px;"><strong>Voices Modeled:</strong> US, EU, China, India, Tech Industry</p>
+                        
+                        <div class="scenario-branches">
+                            <div class="scenario-branch convergence">
+                                <h4 style="color: var(--gold); margin-bottom: 10px;">Harmonic Convergence (32% probability)</h4>
+                                <p style="font-size: 0.9em; line-height: 1.6;">
+                                    <strong>Resolution Path:</strong><br>
+                                    • US-EU quantum AI standards achieve harmonic alignment by 2028<br>
+                                    • China participates in limited tech transfer - counterpoint voice<br>
+                                    • International Quantum AI Safety Board established - conductor role<br>
+                                    • Shared research creates unified composition on cryptography vulnerabilities
+                                </p>
+                            </div>
+                            
+                            <div class="scenario-branch polyphonic">
+                                <h4 style="color: var(--accent); margin-bottom: 10px;">Polyphonic Coexistence (51% probability)</h4>
+                                <p style="font-size: 0.9em; line-height: 1.6;">
+                                    <strong>Resolution Path:</strong><br>
+                                    • Three distinct governance melodies emerge and coexist<br>
+                                    • Limited interoperability - different keys but stable harmony<br>
+                                    • India develops hybrid theme bridging Eastern/Western approaches<br>
+                                    • Private sector navigates complexity through multi-framework orchestration
+                                </p>
+                            </div>
+                            
+                            <div class="scenario-branch dissonance">
+                                <h4 style="color: #cd853f; margin-bottom: 10px;">Dissonant Collapse (17% probability)</h4>
+                                <p style="font-size: 0.9em; line-height: 1.6;">
+                                    <strong>Resolution Path:</strong><br>
+                                    • Competitive deregulation creates regulatory cacophony<br>
+                                    • Safety standards erode - loss of harmonic foundation<br>
+                                    • Major quantum AI incident forces crisis composition<br>
+                                    • Post-hoc emergency regulations - reactive rather than harmonious
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(212, 175, 55, 0.1); padding: 15px; border-radius: 8px; margin-top: 20px; border-left: 4px solid var(--gold);">
+                            <strong style="color: var(--gold);">🎼 Harmony Indicators to Monitor:</strong>
+                            <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.7;">
+                                <li>US-China quantum research collaboration (current: declining dissonance)</li>
+                                <li>EU quantum AI regulatory timeline (expected harmonization Q3 2026)</li>
+                                <li>Private sector safety investment (current: $1.2B annually - growing voice)</li>
+                                <li>International standards formation (monitor ISO/IEC for conductor emergence)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="insight-box">
+                            <span class="insight-icon">♪</span>
+                            <span class="insight-text">Research Opportunity: Most likely outcome (Polyphonic Coexistence) creates demand for "interoperability harmonization" research—understanding how different governance melodies can coexist productively. Under-explored theme in current literature.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        let currentDemo = null;
+        let autoPlayInterval = null;
+        let demoSequence = 0;
+        
+        function showWorkflow(num) {
+            closeDemo();
+            currentDemo = num;
+            document.querySelectorAll('.workflow-card').forEach((card, index) => {
+                if (index + 1 === num) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
+            document.getElementById('demo' + num).classList.add('show');
+            document.getElementById('demo' + num).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function closeDemo() {
+            document.querySelectorAll('.demo-panel').forEach(panel => {
+                panel.classList.remove('show');
+            });
+            document.querySelectorAll('.workflow-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            currentDemo = null;
+        }
+        
+        function resetDemo() {
+            closeDemo();
+            stopAutoDemo();
+            document.querySelectorAll('.demo-output').forEach(output => {
+                output.classList.remove('show');
+            });
+            demoSequence = 0;
+        }
+        
+        function startAutoDemo() {
+            resetDemo();
+            document.getElementById('autoPlayIndicator').classList.add('active');
+            
+            const sequence = [1, 2, 3, 4, 5];
+            demoSequence = 0;
+            
+            function nextDemo() {
+                if (demoSequence < sequence.length) {
+                    showWorkflow(sequence[demoSequence]);
+                    
+                    setTimeout(() => {
+                        switch(sequence[demoSequence]) {
+                            case 1: runLiteratureDemo(); break;
+                            case 2: runHypothesisDemo(); break;
+                            case 3: runCounterfactualDemo(); break;
+                            case 4: runPatternDemo(); break;
+                            case 5: runScenarioDemo(); break;
+                        }
+                    }, 1000);
+                    
+                    demoSequence++;
+                    
+                    if (demoSequence < sequence.length) {
+                        autoPlayInterval = setTimeout(nextDemo, 8000);
+                    } else {
+                        stopAutoDemo();
+                    }
+                }
+            }
+            
+            nextDemo();
+        }
+        
+        function stopAutoDemo() {
+            if (autoPlayInterval) {
+                clearTimeout(autoPlayInterval);
+                autoPlayInterval = null;
+            }
+            document.getElementById('autoPlayIndicator').classList.remove('active');
+        }
+        
+        function runLiteratureDemo() {
+            const output = document.getElementById('literature-output');
+            output.classList.remove('show');
+            setTimeout(() => {
+                output.classList.add('show');
+            }, 100);
+        }
+        
+        function runHypothesisDemo() {
+            const output = document.getElementById('hypothesis-output');
+            output.classList.remove('show');
+            setTimeout(() => {
+                output.classList.add('show');
+                setTimeout(() => {
+                    document.querySelector('#hypothesis-output .harmonization-fill').style.width = '68%';
+                }, 500);
+            }, 100);
+        }
+        
+        function runCounterfactualDemo() {
+            const output = document.getElementById('counterfactual-output');
+            output.classList.remove('show');
+            setTimeout(() => {
+                output.classList.add('show');
+            }, 100);
+        }
+        
+        function runPatternDemo() {
+            const output = document.getElementById('pattern-output');
+            output.classList.remove('show');
+            setTimeout(() => {
+                output.classList.add('show');
+            }, 100);
+        }
+        
+        function runScenarioDemo() {
+            const output = document.getElementById('scenario-output');
+            output.classList.remove('show');
+            setTimeout(() => {
+                output.classList.add('show');
+            }, 100);
+        }
+    </script>
+</body>
+</html>
